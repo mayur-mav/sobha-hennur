@@ -387,7 +387,7 @@ section[id],
 .hero-image {
   object-fit: cover;
   object-position: center center;
-  filter: brightness(1.20) contrast(1.00);
+  filter: brightness(1.10);
 }
 .hero-shade {
   background:
