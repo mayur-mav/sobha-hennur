@@ -34,11 +34,11 @@ window.sobhaData = {
     { label: "DEVELOPER", value: "SOBHA Limited" },
     { label: "CONFIGURATIONS", value: "1 BHK, 2 BHK, 2 BHK+HO, 3 BHK, 4 BHK" },
     { label: "LAND & SCALE", value: "49.92 Acres (50+ Acres) · 3B+34 to 40 Floors · 3,184 Residences" },
-    { label: "PRICE", value: "From ₹1,30,49,250 (₹17,399/sqft* All Inclusive)", isPrice: true, buttonText: "Get Price List →" },
+    { label: "PRICE", value: "From ₹1.30 Cr* (₹17,399/sqft* All Inclusive)", isPrice: true, buttonText: "Get Price List →" },
     { label: "STATUS", value: "Launching Soon · EOI Open (₹2 Lakhs)" },
     {
       label: "K-RERA NO.",
-      value: "",
+      value: "Pre-Launch / Pending",
       isRera: true
     }
   ],
@@ -543,40 +543,60 @@ window.sobhaData = {
   },
   faqs: [
     {
-      question: "What is Sobha Hennur City?",
-      answer: "Sobha Hennur City is a landmark 50+ acre forest-inspired residential mega township by SOBHA Limited located at Hennur, North Bengaluru."
+      question: "What is Sobha Hennur?",
+      answer: "Sobha Hennur is an upcoming luxury residential township project by SOBHA Limited on Hennur Main Road in North Bengaluru. The community offers spacious 2, 3, and 4 BHK apartments integrated with landscaped open spaces and lifestyle amenities."
     },
     {
-      question: "Where is Sobha Hennur City located?",
-      answer: "Sobha Hennur City is situated at Hennur / Chikkagubbi, Off Hennur Main Road & Bagalur Road in North Bengaluru, offering excellent connectivity to Kempegowda International Airport and Outer Ring Road."
+      question: "Where is Sobha Hennur located?",
+      answer: "Sobha Hennur is located on Hennur Main Road in the north of Bengaluru, in Karnataka. The area offers easy connectivity to Manyata Tech Park, Hebbal Flyover, and Kempegowda International Airport."
     },
     {
-      question: "Who is the developer of Sobha Hennur City?",
-      answer: "Sobha Hennur City is constructed and developed by SOBHA Limited, India's only backward-integrated real estate developer."
+      question: "Who is the developer of Sobha Hennur?",
+      answer: "The Sobha Hennur project is a creation of SOBHA Limited, a well-known real estate development company in India known for its backward integration in construction and housing projects in Bengaluru."
     },
     {
-      question: "How large is the Sobha Hennur City project?",
-      answer: "The development spans 49.92 acres (50+ acres) of forest-inspired living and comprises 3,184 thoughtfully planned residences in 3B + 34 to 40 floor towers."
+      question: "What size is the Sobha Hennur development?",
+      answer: "The township covers an area of more than 50 acres of land and will consist of 12 high-rise residential buildings with more than 4,400 apartments."
     },
     {
-      question: "What apartment configurations and sizes are available at Sobha Hennur City?",
-      answer: "Sobha Hennur City offers 1 BHK (750 sqft), 2 BHK Luxe & Grande & HO (1,075 - 1,370 sqft), 3 BHK Luxe & Grande (1,500 - 1,850 sqft), and 4 BHK Luxe & Grande (2,240 - 2,850 sqft)."
+      question: "What apartment configurations are available at Sobha Hennur?",
+      answer: "Sobha Hennur offers luxury 2 BHK (approx. 1,200 sq. ft.), 3 BHK (approx. 1,600 - 1,900 sq. ft.), and 4 BHK (approx. 2,500 sq. ft.) residences designed for individuals, couples, and larger families."
     },
     {
-      question: "What is the starting price at Sobha Hennur City?",
-      answer: "Starting price is ₹1,30,49,250 for 1 BHK (starting at ₹17,399* per sqft all inclusive). All-inclusive price includes basic price, PLC (if applicable), car park, club membership, legal, and other statutory charges."
+      question: "Are the apartments at Sobha Hennur designed according to Vastu principles?",
+      answer: "The project emphasizes 100% Vaastu compliance in terms of planning within its residential layout plans. The interested buyer needs to check the particular tower and apartment layout plans for confirmation on the location and orientation of his chosen flat."
     },
     {
-      question: "What is the EOI booking amount?",
-      answer: "Expressions of Interest (EOI) are currently being accepted starting with ₹2 Lakhs."
+      question: "What makes Sobha Hennur different from other residential projects in North Bengaluru?",
+      answer: "Some of the differences are that it is an integrated township spread across 50+ acres, fully Vaastu compliant layouts, state-of-the-art fast elevators, large landscaped areas, and the quality construction by SOBHA Limited."
     },
     {
-      question: "What amenities are featured at Sobha Hennur City?",
-      answer: "The project features a 150,000 sqft world-class clubhouse, central plaza, sports zones, wellness centers, vibrant retail high street with shopping and dining, and extensive green spaces."
+      question: "How well is Sobha Hennur connected to major areas of Bengaluru?",
+      answer: "Located on Hennur Main Road, the project offers smooth connectivity to Hebbal, Outer Ring Road (ORR), Bellary Road, and upcoming Namma Metro corridors, while placing Kempegowda International Airport roughly 30 minutes away."
     },
     {
-      question: "What is the RERA registration status of Sobha Hennur City?",
-      answer: ""
+      question: "Is Sobha Hennur suitable for professionals working in North Bengaluru?",
+      answer: "Yes. With Manyata Tech Park approximately 15 minutes away and easy access to the Hebbal-ORR employment belt, the location is well suited for IT and corporate professionals working in North Bengaluru."
+    },
+    {
+      question: "How tall are the residential towers at Sobha Hennur, and will the township be developed in phases?",
+      answer: "The Sobha Hennur township is designed to be a landmark development consisting of 12 tall buildings that go up to G+42 floors. With the size of 50 acres, it will be developed in phases, starting with Phase 1, and hence it is important to know which tower and phase the particular apartment belongs to."
+    },
+    {
+      question: "Are floor plans and project brochures available for Sobha Hennur?",
+      answer: "Yes. Master plan layouts, unit floor plans, and digital project brochures can be requested directly through the authorized sales team or project enquiry portal."
+    },
+    {
+      question: "Does Sobha Hennur include on-site retail or commercial conveniences within the township?",
+      answer: "Yes. Beyond residential towers, the master plan incorporates a dedicated retail and commercial plaza designed to bring daily essentials, cafes, and convenience stores within walking distance for residents."
+    },
+    {
+      question: "How is open green space and sustainability planned at Sobha Hennur?",
+      answer: "Approximately 80% of the township's total land area is dedicated to open green spaces, tiered landscaped gardens, and native tree plantations, complemented by eco-friendly infrastructure such as rainwater harvesting and an on-site sewage treatment plant."
+    },
+    {
+      question: "Is Sobha Hennur a good option for both homebuyers and real estate investors?",
+      answer: "Sobha Hennur appeals to both end-users and investors due to its large-scale township planning, reputable developer brand, and proximity to North Bengaluru employment hubs. Buyers should independently evaluate unit pricing, possession schedules, maintenance charges, and rental yields before finalizing a purchase."
     }
   ]
 };

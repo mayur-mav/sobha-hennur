@@ -286,7 +286,7 @@
             <p class="plan-details-desc">${escapeHtml(plan.description)}</p>
 
             <div class="plan-metrics-grid">
-              <div class="metric-box metric-box-locked" data-scroll-enquire role="button" tabindex="0" aria-label="Unlock saleable area for ${escapeHtml(plan.tabName || plan.name)}">
+              <div class="metric-box metric-box-locked" data-scroll-enquire data-plan-config="${escapeHtml(plan.tabName || plan.name)}" role="button" tabindex="0" aria-label="Unlock saleable area for ${escapeHtml(plan.tabName || plan.name)}">
                 <div class="metric-locked-wrap">
                   <strong class="metric-val blur-locked">${escapeHtml(plan.saleable || "750 sqft")}</strong>
                   <div class="lock-circle-badge metric-lock-circle" aria-hidden="true">
@@ -295,7 +295,7 @@
                 </div>
                 <span class="metric-lbl">SQ FT SALEABLE</span>
               </div>
-              <div class="metric-box metric-box-locked" data-scroll-enquire role="button" tabindex="0" aria-label="Unlock carpet area for ${escapeHtml(plan.tabName || plan.name)}">
+              <div class="metric-box metric-box-locked" data-scroll-enquire data-plan-config="${escapeHtml(plan.tabName || plan.name)}" role="button" tabindex="0" aria-label="Unlock carpet area for ${escapeHtml(plan.tabName || plan.name)}">
                 <div class="metric-locked-wrap">
                   <strong class="metric-val blur-locked">${escapeHtml(plan.carpet || "On Request")}</strong>
                   <div class="lock-circle-badge metric-lock-circle" aria-hidden="true">
@@ -304,7 +304,7 @@
                 </div>
                 <span class="metric-lbl">SQ FT RERA CARPET</span>
               </div>
-              <div class="metric-box metric-box-locked" data-scroll-enquire role="button" tabindex="0" aria-label="Unlock starting price for ${escapeHtml(plan.tabName || plan.name)}">
+              <div class="metric-box metric-box-locked" data-scroll-enquire data-plan-config="${escapeHtml(plan.tabName || plan.name)}" role="button" tabindex="0" aria-label="Unlock starting price for ${escapeHtml(plan.tabName || plan.name)}">
                 <div class="metric-locked-wrap">
                   <strong class="metric-val blur-locked">${escapeHtml(plan.price || "₹1.30 Cr*")}</strong>
                   <div class="lock-circle-badge metric-lock-circle" aria-hidden="true">
@@ -1387,25 +1387,66 @@
     if (!select) return;
     const shell = select.closest(".custom-dropdown-shell") || select.parentElement;
     const trigger = shell?.querySelector(".custom-dropdown-trigger");
-    const normTarget = String(targetConfig || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+    const rawTarget = String(targetConfig || "").trim();
+    const normTarget = rawTarget.toLowerCase().replace(/[^a-z0-9]/g, "");
 
     let targetIndex = 0; // Default to first option
 
     if (normTarget) {
-      // 1. Exact normalized match first (e.g. "3bhk2t" === "3bhk2t")
+      // 1. Exact match (case and symbols normalized)
       let idx = Array.from(select.options).findIndex((opt) => {
         const normVal = opt.value.toLowerCase().replace(/[^a-z0-9]/g, "");
         const normText = opt.textContent.toLowerCase().replace(/[^a-z0-9]/g, "");
-        return normVal === normTarget || normText === normTarget;
+        return opt.value === rawTarget || normVal === normTarget || normText === normTarget;
       });
 
-      // 2. Substring match fallback if exact match wasn't found
+      // 2. Specific typology pattern recognition
+      if (idx === -1) {
+        const isPowder = normTarget.includes("powder");
+        const isHO = normTarget.includes("ho") || normTarget.includes("office") || normTarget.includes("study");
+        const isGrande = normTarget.includes("grande");
+        const isLuxe = normTarget.includes("luxe");
+        const is4BHK = normTarget.includes("4bhk") || normTarget.startsWith("4b");
+        const is3BHK = normTarget.includes("3bhk") || normTarget.startsWith("3b");
+        const is2BHK = normTarget.includes("2bhk") || normTarget.startsWith("2b");
+        const is1BHK = normTarget.includes("1bhk") || normTarget.startsWith("1b");
+
+        const has2T = normTarget.includes("2t");
+        const has3T = normTarget.includes("3t");
+        const has4T = normTarget.includes("4t");
+
+        const findByVal = (kw) => Array.from(select.options).findIndex((opt) => opt.value.toLowerCase().replace(/[^a-z0-9]/g, "").includes(kw));
+
+        if (isPowder) {
+          idx = findByVal("powder");
+        } else if (isHO) {
+          idx = findByVal("ho");
+        } else if (is4BHK) {
+          if (isGrande || has4T) idx = findByVal("4bhkgrande4t") !== -1 ? findByVal("4bhkgrande4t") : findByVal("4bhkgrande");
+          else if (isLuxe || has3T) idx = findByVal("4bhkluxe");
+          else idx = findByVal("4bhk");
+        } else if (is3BHK) {
+          if (isGrande) idx = findByVal("3bhkgrande");
+          else if (has3T) idx = findByVal("3bhkluxe3t") !== -1 ? findByVal("3bhkluxe3t") : findByVal("3t");
+          else if (has2T) idx = findByVal("3bhkluxe2t") !== -1 ? findByVal("3bhkluxe2t") : findByVal("2t");
+          else if (isLuxe) idx = findByVal("3bhkluxe2t") !== -1 ? findByVal("3bhkluxe2t") : findByVal("3bhk");
+          else idx = findByVal("3bhk");
+        } else if (is2BHK) {
+          if (isGrande) idx = findByVal("2bhkgrande");
+          else if (isLuxe) idx = findByVal("2bhkluxe");
+          else idx = findByVal("2bhk");
+        } else if (is1BHK) {
+          idx = findByVal("1bhk");
+        }
+      }
+
+      // 3. Substring match fallback if exact match wasn't found
       if (idx === -1) {
         idx = Array.from(select.options).findIndex((opt) => {
           const normVal = opt.value.toLowerCase().replace(/[^a-z0-9]/g, "");
           const normText = opt.textContent.toLowerCase().replace(/[^a-z0-9]/g, "");
           return normVal.includes(normTarget) || normTarget.includes(normVal) ||
-                 normText.includes(normTarget) || normTarget.includes(normText);
+                 normText.includes(normTarget) || normText.includes(normText);
         });
       }
 
@@ -1832,7 +1873,7 @@
         source = "Brochure Download";
       } else if (btn.closest(".metric-box-locked")) {
         const activeTab = document.querySelector(".floorplan-pill-tab.is-active, .floorplan-pill-tab[aria-selected='true']");
-        const cfgTitle = activeTab ? activeTab.textContent.trim() : "";
+        const cfgTitle = btn.dataset.planConfig || btn.closest("[data-plan-config]")?.dataset.planConfig || (activeTab ? activeTab.textContent.trim() : "");
         config = cfgTitle || "";
         title = cfgTitle ? `Unlock Details for ${cfgTitle}` : "Unlock Floor Plan & Pricing Details";
         subtitle = "Enter your details to receive unmasked square footage, carpet area & official price breakdown on WhatsApp.";
