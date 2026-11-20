@@ -3,7 +3,7 @@ window.sobhaData = {
   // Lead Capture API Endpoint & Project Configuration
   // ==========================================================================
   leadApiUrl: "https://leadapi.homebble.in/formdataRoute/getFormdata",
-  projectName: "Sobha Hennur City",
+  projectName: "Sobha Hennur",
   reraNo: "",
 
   pricingLeadText: "Official cost break-up for Sobha Hennur City starting from ₹17,399* per sq.ft all inclusive. All Inclusive Price includes Basic Price, PLC (if applicable), Car Park, Club Membership, Legal & Other Statutory Charges. Expressions of Interest (EOI) are currently being accepted starting with ₹2 Lakhs.",
@@ -70,11 +70,11 @@ window.sobhaData = {
   ],
   overviewShowcase: [
     { src: "assets/hero.webp", alt: "Sobha Hennur City 50+ acres forest-inspired mega township", caption: "50+ ACRES OF FOREST-INSPIRED LIVING" },
-    { src: "assets/masterplan.jpg", alt: "Sobha Hennur City self-sustained township master plan", caption: "SELF-SUSTAINED TOWNSHIP MASTER PLAN" },
-    { src: "assets/cost-breakup.jpg", alt: "Sobha Hennur City cost break-up and typologies", caption: "OFFICIAL COST BREAK-UP & TYPOLOGIES" },
-    { src: "assets/amenities-page.webp", alt: "150,000 sqft world-class clubhouse", caption: "150,000 SQFT WORLD-CLASS CLUBHOUSE" },
-    { src: "assets/garden-walkway.webp", alt: "Expansive green spaces and central plaza", caption: "EXPANSIVE GREEN SPACES & CENTRAL PLAZA" },
-    { src: "assets/exterior-night.webp", alt: "High-rise residential towers", caption: "3B + 34 TO 40 FLOORS RESIDENTIAL TOWERS" }
+    { src: "assets/residential-towers.webp", alt: "Sobha Hennur City high-rise residential towers", caption: "3B + 34 TO 40 FLOORS RESIDENTIAL TOWERS" },
+    { src: "assets/clubhouse-concept.webp", alt: "150,000 sqft world-class clubhouse", caption: "150,000 SQFT WORLD-CLASS CLUBHOUSE" },
+    { src: "assets/clubhouse-pool.webp", alt: "Resort-style swimming pool and wellness amenities", caption: "RESORT-STYLE CLUBHOUSE & POOL" },
+    { src: "assets/landscaped-gardens.webp", alt: "Expansive green spaces and central plaza", caption: "EXPANSIVE GREEN SPACES & NATURE TRAILS" },
+    { src: "assets/contemporary-lounge.webp", alt: "Sobha signature luxury finishes and contemporary living", caption: "THE SOBHA QUALITY & LUXURY LIVING" }
   ],
   brochureItems: [
     "Complete 50+ acre mega township master plan with tower layout blueprint",
@@ -184,7 +184,7 @@ window.sobhaData = {
       subLabel: "ALL INCLUSIVE PRICE"
     }
   ],
-  floorPlans: [
+    floorPlans: [
     {
       tabName: "1 BHK",
       name: "1 BHK (1B + 1T)",
@@ -193,7 +193,7 @@ window.sobhaData = {
       saleable: "750 sqft",
       carpet: "",
       price: "₹1,30,49,250",
-      image: "assets/masterplan.jpg",
+      image: "assets/1bhk-floor-plan.webp",
       bullets: [
         "750 sqft super built-up area",
         "Tower structure: 3B + 34 to 40 floors",
@@ -208,7 +208,7 @@ window.sobhaData = {
       saleable: "1,075 sqft",
       carpet: "",
       price: "₹1,87,03,925",
-      image: "assets/masterplan.jpg",
+      image: "assets/2bhk-floor-plan(luxe).webp",
       bullets: [
         "1,075 sqft super built-up area",
         "2 Bedrooms + 2 Bathrooms layout",
@@ -223,7 +223,7 @@ window.sobhaData = {
       saleable: "1,225 sqft",
       carpet: "",
       price: "₹2,13,13,775",
-      image: "assets/masterplan.jpg",
+      image: "assets/2bhk-floor-plan(grande).webp",
       bullets: [
         "1,225 sqft super built-up area",
         "Enhanced living-dining layout with double balconies",
@@ -238,7 +238,7 @@ window.sobhaData = {
       saleable: "1,370 sqft",
       carpet: "",
       price: "₹2,38,36,630",
-      image: "assets/masterplan.jpg",
+      image: "assets/2bhk-floor-plan(home-office-study).webp",
       bullets: [
         "1,370 sqft super built-up area",
         "Dedicated Home Office / Study space",
@@ -253,7 +253,7 @@ window.sobhaData = {
       saleable: "1,500 sqft",
       carpet: "",
       price: "₹2,60,98,500",
-      image: "assets/masterplan.jpg",
+      image: "assets/3bhk-floor-plan(luxe-2t).webp",
       bullets: [
         "1,500 sqft super built-up area",
         "3 Bedrooms + 2 Bathrooms layout",
@@ -268,7 +268,7 @@ window.sobhaData = {
       saleable: "1,660 sqft",
       carpet: "",
       price: "₹2,88,82,340",
-      image: "assets/masterplan.jpg",
+      image: "assets/3bhk-floor-plan(luxe-3t).webp",
       bullets: [
         "1,660 sqft super built-up area",
         "3 Bedrooms + 3 Bathrooms layout",
@@ -283,7 +283,7 @@ window.sobhaData = {
       saleable: "1,850 sqft",
       carpet: "",
       price: "₹3,21,88,150",
-      image: "assets/masterplan.jpg",
+      image: "assets/3bhk-floor-plan(grande).webp",
       bullets: [
         "1,850 sqft super built-up area",
         "Grande living-dining hall and premium master bedroom",
@@ -298,7 +298,7 @@ window.sobhaData = {
       saleable: "2,240 sqft",
       carpet: "",
       price: "₹3,89,73,760",
-      image: "assets/masterplan.jpg",
+      image: "assets/4bhk-floor-plan(luxe).webp",
       bullets: [
         "2,240 sqft super built-up area",
         "4 Bedrooms + 3 Bathrooms configuration",
@@ -313,7 +313,7 @@ window.sobhaData = {
       saleable: "2,450 sqft",
       carpet: "",
       price: "₹4,26,27,550",
-      image: "assets/masterplan.jpg",
+      image: "assets/4bhk-floor-plan(grande-4t).webp",
       bullets: [
         "2,450 sqft super built-up area",
         "4 Bedrooms + 4 En-suite Bathrooms",
@@ -328,7 +328,7 @@ window.sobhaData = {
       saleable: "2,850 sqft",
       carpet: "",
       price: "₹4,95,87,150",
-      image: "assets/masterplan.jpg",
+      image: "assets/4bhk-floor-plan(grande-4t-powder).webp",
       bullets: [
         "2,850 sqft maximum super built-up area",
         "4 Bedrooms + 4 Bathrooms + Powder Room",
@@ -336,12 +336,12 @@ window.sobhaData = {
       ]
     }
   ],
-  residences: [
+    residences: [
     {
       name: "1 & 2 BHK Residences",
       label: "750 to 1,370 sqft",
       description: "Thoughtfully planned 1 BHK (750 sqft · ₹1.30 Cr*), 2 BHK Luxe & Grande (1,075 - 1,225 sqft · ₹1.87 - 2.13 Cr*), and 2 BHK + HO (1,370 sqft · ₹2.38 Cr*) in a 50+ acre mega township.",
-      image: "assets/bedroom-study.webp",
+      image: "assets/living-room-city-view.webp",
       imageAlt: "Sobha Hennur City luxury 1 & 2 BHK residences",
       size: "750 to 1,370 sqft",
       tag: "1 & 2 BHK"
@@ -350,18 +350,18 @@ window.sobhaData = {
       name: "3 & 4 BHK Residences",
       label: "1,500 to 2,850 sqft",
       description: "Spacious 3 BHK Luxe & Grande (1,500 - 1,850 sqft · ₹2.61 - 3.22 Cr*) and 4 BHK Luxe & Grande (2,240 - 2,850 sqft · ₹3.90 - 4.96 Cr*).",
-      image: "assets/primary-bedroom.webp",
+      image: "assets/bedroom-garden-view.webp",
       imageAlt: "Sobha Hennur City luxury 3 and 4 BHK residences",
       size: "1,500 to 2,850 sqft",
       tag: "3 & 4 BHK"
     }
   ],
-  amenitySlides: [
-    { src: "assets/amenities-page.webp", title: "150,000 sqft World-Class Clubhouse", alt: "150,000 sqft World-Class Clubhouse at Sobha Hennur City" },
-    { src: "assets/garden-walkway.webp", title: "Expansive Green Spaces & Parks", alt: "Expansive green spaces and forest-inspired living" },
-    { src: "assets/masterplan.jpg", title: "Central Plaza & Gathering Spaces", alt: "Central Plaza at Sobha Hennur City" },
-    { src: "assets/hero.webp", title: "Vibrant Retail High Street", alt: "Vibrant retail high street with shopping and dining" },
-    { src: "assets/exterior-night.webp", title: "Sports Zones & Wellness Amenities", alt: "Sports zones and recreational amenities" }
+    amenitySlides: [
+    { src: "assets/clubhouse-concept.webp", title: "150,000 sqft World-Class Clubhouse", alt: "150,000 sqft World-Class Clubhouse at Sobha Hennur City" },
+    { src: "assets/clubhouse-pool.webp", title: "Resort-Style Swimming Pool & Deck", alt: "Clubhouse swimming pool and leisure amenities" },
+    { src: "assets/landscaped-gardens.webp", title: "Expansive Green Spaces & Parks", alt: "Expansive green spaces and forest-inspired living" },
+    { src: "assets/recreation-pavilion-concept.webp", title: "Sports Zones & Recreation Pavilion", alt: "Sports zones and recreational amenities" },
+    { src: "assets/temple-concept.webp", title: "Serene Community Spaces", alt: "Community spaces and temple pavilion at Sobha Hennur City" }
   ],
   amenityGroups: [
     {
@@ -381,42 +381,21 @@ window.sobhaData = {
     }
   ],
   projectGallery: [
-    {
-      src: "assets/hero.webp",
-      tag: "TOWNSHIP",
-      credit: "ARTIST'S IMPRESSION",
-      alt: "50+ Acres of forest-inspired living at Sobha Hennur City"
-    },
-    {
-      src: "assets/masterplan.jpg",
-      tag: "MASTER PLAN",
-      credit: "MASTER LAYOUT",
-      alt: "Sobha Hennur City layout plan with central plaza, parks, and retail street"
-    },
-    {
-      src: "assets/cost-breakup.jpg",
-      tag: "COST BREAK-UP",
-      credit: "OFFICIAL PRICING",
-      alt: "Sobha Hennur City official typology cost break-up chart"
-    },
-    {
-      src: "assets/amenities-page.webp",
-      tag: "CLUBHOUSE",
-      credit: "ARTIST'S IMPRESSION",
-      alt: "150,000 sqft world-class clubhouse"
-    },
-    {
-      src: "assets/garden-walkway.webp",
-      tag: "GREEN SPACES",
-      credit: "ARTIST'S IMPRESSION",
-      alt: "Expansive green spaces and nature walkways"
-    },
-    {
-      src: "assets/exterior-night.webp",
-      tag: "ELEVATION",
-      credit: "ARTIST'S IMPRESSION",
-      alt: "Sobha Hennur City high-rise towers elevation"
-    }
+    { src: "assets/residential-towers.webp", tag: "ELEVATION", credit: "ARCHITECTURAL VIEW", alt: "Sobha Hennur City residential towers" },
+    { src: "assets/residential-towers-evening.webp", tag: "ELEVATION", credit: "TWILIGHT VIEW", alt: "Sobha Hennur City high-rise towers in evening" },
+    { src: "assets/residential-towers-garden-view.webp", tag: "TOWNSHIP", credit: "TOWER & GARDEN VIEW", alt: "Residential towers overlooking lush green gardens" },
+    { src: "assets/clubhouse-concept.webp", tag: "CLUBHOUSE", credit: "GRAND FACADE", alt: "150,000 sqft world-class grand clubhouse" },
+    { src: "assets/clubhouse-pool.webp", tag: "POOL", credit: "RESORT LIVING", alt: "Resort-style clubhouse swimming pool and deck" },
+    { src: "assets/landscaped-entrance.webp", tag: "ENTRANCE", credit: "GRAND ARRIVAL", alt: "Landscaped arrival entrance boulevard" },
+    { src: "assets/landscaped-gardens.webp", tag: "LANDSCAPE", credit: "FOREST TRAILS", alt: "Expansive green spaces and forest-inspired park trails" },
+    { src: "assets/residential-courtyard.webp", tag: "COURTYARD", credit: "COMMUNITY PLAZA", alt: "Central residential courtyard and open plaza" },
+    { src: "assets/living-room-city-view.webp", tag: "INTERIORS", credit: "LIVING LOUNGE", alt: "Spacious living room with panoramic views" },
+    { src: "assets/living-room-sunset.webp", tag: "INTERIORS", credit: "SUNSET LOUNGE", alt: "Luxury living room with sunset vistas" },
+    { src: "assets/open-plan-living-dining.webp", tag: "INTERIORS", credit: "LIVING & DINING", alt: "Open plan living and dining layout" },
+    { src: "assets/bedroom-garden-view.webp", tag: "BEDROOM", credit: "MASTER BEDROOM", alt: "Master bedroom suite with expansive window views" },
+    { src: "assets/contemporary-lounge.webp", tag: "LOUNGE", credit: "BESPOKE INTERIORS", alt: "Contemporary family lounge and entertainment zone" },
+    { src: "assets/recreation-pavilion-concept.webp", tag: "SPORTS", credit: "RECREATION ZONE", alt: "Recreation pavilion and sports facilities" },
+    { src: "assets/temple-concept.webp", tag: "WELLNESS", credit: "SERENE PAVILION", alt: "Serene community temple concept pavilion" }
   ],
   locationGroups: [
     {
